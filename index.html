@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IFBA - Campus Lauro de Freitas</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/antijingoist/open-dyslexic/web/opendyslexic.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="contrast-toggle" onclick="toggleContrast()">Alto Contraste</div>
+  <div class="leitura-toggle" onclick="toggleLeituraFacil()">Leitura Fácil</div>
+
+  <header>
+    <div>
+      <img src="logo.png" alt="Logo IFBA" />
+    </div>
+    <h1>IFBA - Campus Lauro de Freitas</h1>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Buscar no portal..." oninput="searchTiles()" />
+    <div id="autocomplete" class="autocomplete-list"></div>
+  </div>
+
+  <div class="layout">
+    <aside>
+      <h2>Área do Servidor</h2>
+      <div class="server-links">
+        <a href="https://portal.ifba.edu.br/lauro-de-freitas/acesso-a-informacao/servidores-1" class="tile" target="_blank"><i>👨‍🏫</i>Servidores</a>
+        <a href="https://portal.ifba.edu.br/lauro-de-freitas/pesquisa/projetos-2" class="tile" target="_blank"><i>💬</i>Pesquisadores</a>
+        <a href="https://portal.ifba.edu.br/lauro-de-freitas/menu-institucional/contatos" class="tile" target="_blank"><i>📝</i>Contatos</a>
+      </div>
+    </aside>
+
+    <main class="container">
+      <h2>Acesso Rápido</h2>
+      <div class="grid" role="navigation" aria-label="Links de acesso rápido" id="tileContainer">
+        <a href="https://suap.ifba.edu.br/accounts/login/?next=/" class="tile" target="_blank"><i>📁</i>SUAP</a>
+        <a href="https://portal.ifba.edu.br/" class="tile" target="_blank"><i>🌌</i>Portal</a>
+        <a href="https://ava.ifba.edu.br/login/index.php" class="tile" target="_blank"><i>🌀</i>AVA</a>
+        <a href="https://biblioteca.ifba.edu.br/biblioteca/index.p'p" class="tile" target="_blank"><i>📚</i>Biblioteca</a>
+        <a href="http://www.asetore.ifba.edu.br:8080/jspui/" class="tile" target="_blank"><i>📖</i>Biblioteca Virtual</a>
+        <a href="https://portal.ifba.edu.br/contatoifba" class="tile" target="_blank"><i>📜</i>Contatos</a>
+        <a href="https://portal.ifba.edu.br/lauro-de-freitas/menu-ensino/manuais-e-normas-dos-alunos" class="tile" target="_blank"><i>📰</i>Manual do Aluno</a>
+        <a href="https://portal.ifba.edu.br/menu-de-apoio/ouvidoria" class="tile" target="_blank"><i>📢</i>Ouvidoria</a>
+        <a href="https://portal.ifba.edu.br/institucional2/consup/regimento-geral-do-ifba.pdf" class="tile" target="_blank"><i>⚖️</i>Regimento</a>
+        <a href="https://portal.ifba.edu.br/lauro-de-freitas/copy_of_MapadocampusLaurodeFreitas.png" class="tile" target="_blank"><i>📍</i>Mapa do Campus</a>
+        <a href="https://portal.ifba.edu.br/lauro-de-freitas/ensino/assis-estudantil" class="tile" target="_blank"><i>🗂️</i>Assistência Estudantil</a>
+        <a href="https://docs.google.com/spreadsheets/d/1_VQuhoqAKjW1VtOCeBHBy4URvVp17b8cFhg0w33BB3s/edit?gid=2039063055#gid=2039063055" class="tile" target="_blank"><i>🕰️</i>Horário das Aulas</a>
+        <a href="https://portal.ifba.edu.br/lauro-de-freitas/menu-ensino/calendariosuperior2025.pdf" class="tile" target="_blank"><i>📅</i>Calendário Academico</a>
+        <a href="https://portal.ifba.edu.br/lauro-de-freitas/menu-extensao/estagio-1"class="tile" target="_blank"><i>📋</i>Estágios</a>
+        <a href="https://portal.ifba.edu.br/lauro-de-freitas/extensao/editais/ "class="tile" target="_blank"><i>📑</i>Editais</a>
+        <a href="https://portal.ifba.edu.br/lauro-de-freitas/menu-ensino/gremio-estudantil "class="tile" target="_blank"><i>👥</i>Grêmio Estudantil</a>
+        <a href="https://portal.ifba.edu.br/lauro-de-freitas/menu-institucional/processos-seletivos-1 "class="tile" target="_blank"><i>🚪</i>Processo Seletivo</a>
+        <a href="https://www.instagram.com/ifbalauro/ "class="tile" target="_blank"><i>📲</i>Instagram</a>
+        <a href="https://portal.ifba.edu.br/lauro-de-freitas/pesquisa/documentos-1/?_authenticator=9b0c75678c19c762cb10e3c2f296e95e12b44827 "class="tile" target="_blank"><i>📄</i>Documentos</a>
+        <a href="https://portal.ifba.edu.br/lauro-de-freitas/eleicoes/eleicoes "class="tile" target="_blank"><i>📮</i>Eleições</a>
+      </div>
+    </main>
+
+    <aside>
+      <h2>Mapa de Navegação</h2>
+      <div class="tile" onclick="openMapModal()">Visualizar Mapa</div>
+
+      <div class="unidades-section">
+        <h2>UNIDADES</h2>
+        <img src="mapa.png" alt="Mapa do IFBA" onclick="window.open('mapa.png', '_blank')" />
+        <p>O IFBA está presente em todos os territórios da Bahia. Clique na imagem acima para conhecer o campus IFBA da cidade mais próxima a você.</p>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    © 2025 Instituto Federal da Bahia - Campus Lauro de Freitas
+  </footer>
+
+  <div id="mapModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeMap()">&times;</span>
+      <div class="modal-header">
+        <h2>Mapa de Navegação do Portal</h2>
+      </div>
+      <div class="modal-body">
+        <div>
+          <h3>Área do Servidor</h3>
+          <ul>
+            <li>SIGRH</li>
+            <li>Avaliação de Desempenho</li>
+            <li>Documentos Internos</li>
+            <li>Comunicação Interna</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Área do Aluno</h3>
+          <ul>
+            <li>SUAP</li>
+            <li>Portal</li>
+            <li>AVA</li>
+            <li>Contatos</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button onclick="closeMap()">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+</body>
+</html>
