@@ -51,5 +51,5 @@ Este projeto foi desenvolvido com foco em usabilidade e organização de informa
 
 ## Autor
 
-Thasso Felipe  
+Thasso Holanda  
 https://github.com/Phel-lip
