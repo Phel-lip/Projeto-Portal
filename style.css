@@ -1,13 +1,23 @@
+/* =========================================
+   VARIÁVEIS GLOBAIS / DESIGN SYSTEM
+========================================= */
+
 :root {
   --primary: #006400;
   --secondary: #d9edf7;
+
   --text: #333;
   --bg: #fff;
+
   --contrast-bg: #000;
   --contrast-text: #fff;
   --contrast-link: #ff0;
   --contrast-secondary: #444;
 }
+
+/* =========================================
+   ESTILOS GLOBAIS DA PÁGINA
+========================================= */
 
 body {
   margin: 0;
@@ -15,6 +25,10 @@ body {
   background-color: var(--bg);
   color: var(--text);
 }
+
+/* =========================================
+   HEADER
+========================================= */
 
 header {
   background-color: var(--primary);
@@ -34,14 +48,102 @@ header div {
   left: 1rem;
 }
 
+/* =========================================
+   BOTÕES DE ACESSIBILIDADE
+========================================= */
+
+.contrast-toggle,
+.leitura-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  background: #ffff00;
+  color: #000;
+
+  padding: 0.4rem 0.8rem;
+
+  font-weight: bold;
+  font-size: 14px;
+
+  border-radius: 5px;
+  border: 2px solid #000;
+
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.leitura-toggle {
+  right: 11rem;
+}
+
+/* =========================================
+   BARRA DE BUSCA
+========================================= */
+
+.search-bar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.search-bar input {
+  width: 80%;
+  max-width: 400px;
+
+  padding: 0.5rem;
+
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* =========================================
+   AUTOCOMPLETE
+========================================= */
+
+.autocomplete-list {
+  position: absolute;
+  top: 100%;
+
+  width: 80%;
+  max-width: 400px;
+
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 0 0 4px 4px;
+
+  overflow: hidden;
+  z-index: 10;
+}
+
+.autocomplete-list div {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.autocomplete-list div:hover {
+  background-color: #eee;
+}
+
+/* =========================================
+   LAYOUT PRINCIPAL
+========================================= */
+
 .layout {
   display: grid;
   grid-template-columns: 250px 1fr 250px;
+
   gap: 2rem;
+
   max-width: 1400px;
   margin: auto;
   padding: 1rem;
 }
+
+/* =========================================
+   ASIDES
+========================================= */
 
 aside {
   background: #f9f9f9;
@@ -54,10 +156,9 @@ aside h2 {
   margin-bottom: 1rem;
 }
 
-.server-links .tile {
-  margin-bottom: 0.8rem;
-  background-color: #e0f5e9;
-}
+/* =========================================
+   CONTEÚDO PRINCIPAL
+========================================= */
 
 .container {
   display: grid;
@@ -71,12 +172,21 @@ aside h2 {
   gap: 1rem;
 }
 
+/* =========================================
+   COMPONENTE TILE / CARD
+========================================= */
+
 .tile {
   background-color: var(--secondary);
+
   padding: 1rem;
+
   border-radius: 8px;
+
   text-align: center;
+
   cursor: pointer;
+
   transition: background 0.3s;
 }
 
@@ -85,87 +195,134 @@ aside h2 {
 }
 
 .tile i {
-  font-size: 24px;
   display: block;
+
+  font-size: 24px;
+
   margin-bottom: 8px;
 }
 
-.search-bar {
-  position: relative;
-  display: flex;
+/* =========================================
+   TILE ESPECÍFICO - ÁREA DO SERVIDOR
+========================================= */
+
+.server-links .tile {
+  margin-bottom: 0.8rem;
+  background-color: #e0f5e9;
+}
+
+/* =========================================
+   MODAL
+========================================= */
+
+.modal {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 1001;
+
   justify-content: center;
-  margin: 1rem 0;
+  align-items: center;
 }
 
-.search-bar input {
-  padding: 0.5rem;
+.modal-content {
   width: 80%;
-  max-width: 400px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+  max-width: 600px;
+
+  background-color: #fff;
+
+  padding: 2rem;
+
+  border-radius: 10px;
+
+  text-align: center;
 }
 
-.autocomplete-list {
-  position: absolute;
-  top: 100%;
-  background: white;
-  border: 1px solid #ccc;
-  width: 80%;
-  max-width: 400px;
-  z-index: 10;
-  border-radius: 0 0 4px 4px;
-  overflow: hidden;
+.modal-header {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.autocomplete-list div {
-  padding: 0.5rem;
-  cursor: pointer;
+.modal-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
-.autocomplete-list div:hover {
-  background-color: #eee;
+.modal-footer {
+  margin-top: 1rem;
 }
 
-.contrast-toggle, .leitura-toggle {
+.modal .close {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: #ffff00;
-  color: #000;
-  padding: 0.4rem 0.8rem;
-  font-weight: bold;
-  border-radius: 5px;
-  border: 2px solid #000;
+
+  font-size: 1.5rem;
+
   cursor: pointer;
-  font-size: 14px;
-  z-index: 1000;
 }
 
-.leitura-toggle {
-  right: 11rem;
+/* =========================================
+   SEÇÃO UNIDADES
+========================================= */
+
+.unidades-section {
+  margin-top: 2rem;
+  text-align: center;
 }
+
+.unidades-section img {
+  max-width: 100%;
+  height: auto;
+
+  margin-bottom: 1rem;
+}
+
+.unidades-section p {
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
 
 footer {
   background-color: #f1f1f1;
+
   text-align: center;
+
   padding: 1rem;
+
   font-size: 0.9rem;
 }
 
-/* Contraste */
+/* =========================================
+   MODO ALTO CONTRASTE
+========================================= */
+
 .contrast body {
   background-color: var(--contrast-bg);
-  color: var(--contrast-text);
-}
-
-.contrast .tile {
-  background-color: var(--contrast-secondary);
   color: var(--contrast-text);
 }
 
 .contrast header,
 .contrast footer {
   background-color: #111;
+  color: var(--contrast-text);
+}
+
+.contrast .tile {
+  background-color: var(--contrast-secondary);
   color: var(--contrast-text);
 }
 
@@ -185,7 +342,10 @@ footer {
   border: 2px solid #000;
 }
 
-/* Leitura Fácil */
+/* =========================================
+   MODO LEITURA FÁCIL
+========================================= */
+
 .leitura-facil {
   font-family: 'OpenDyslexic', 'Roboto', sans-serif;
   font-size: 1.2rem;
@@ -196,7 +356,10 @@ footer {
   font-weight: bold;
 }
 
-/* Leitura Fácil com Contraste */
+/* =========================================
+   LEITURA FÁCIL + ALTO CONTRASTE
+========================================= */
+
 .contrast.leitura-facil body {
   background-color: #000 !important;
   color: #fff !important;
@@ -224,67 +387,4 @@ footer {
 .contrast.leitura-facil footer {
   background-color: #111 !important;
   color: #fff !important;
-}
-
-/* Modal */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1001;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 600px;
-  text-align: center;
-}
-
-.modal-header {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.modal-body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-.modal-footer {
-  margin-top: 1rem;
-}
-
-.modal .close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* Seção Unidades */
-.unidades-section {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.unidades-section img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
-}
-
-.unidades-section p {
-  font-size: 1.1rem;
-  color: var(--text);
 }
