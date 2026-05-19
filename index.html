@@ -8,15 +8,16 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/antijingoist/open-dyslexic/web/opendyslexic.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="contrast-toggle" onclick="toggleContrast()">Alto Contraste</div>
-  <div class="leitura-toggle" onclick="toggleLeituraFacil()">Leitura Fácil</div>
+
+<body> 
+  <button class="contrast-toggle" onclick="toggleContrast()">Alto Contraste</button>
+  <button class="leitura-toggle" onclick="toggleLeituraFacil()">Leitura Fácil</button>
 
   <header>
     <div>
       <img src="logo.png" alt="Logo IFBA" />
     </div>
-    <h1>IFBA - Campus Lauro de Freitas</h1>
+    <h1>IFBA - Campus Lauro de Freitas</h1> 
   </header>
 
   <div class="search-bar">
@@ -62,7 +63,7 @@
 
     <aside>
       <h2>Mapa de Navegação</h2>
-      <div class="tile" onclick="openMapModal()">Visualizar Mapa</div>
+      <button class="tile" onclick="openMapModal()">Visualizar Mapa</button>
 
       <div class="unidades-section">
         <h2>UNIDADES</h2>
@@ -76,44 +77,51 @@
     © 2025 Instituto Federal da Bahia - Campus Lauro de Freitas
   </footer>
 
-  <div id="mapModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeMap()">&times;</span>
-      <div class="modal-header">
-        <h2>Mapa de Navegação do Portal</h2>
-      </div>
-      <div class="modal-body">
-        <div>
-          <h3>Área do Servidor</h3>
-          <ul>
-            <li>SIGRH</li>
-            <li>Avaliação de Desempenho</li>
-            <li>Documentos Internos</li>
-            <li>Comunicação Interna</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Área do Aluno</h3>
-          <ul>
-            <li>SUAP</li>
-            <li>Portal</li>
-            <li>AVA</li>
-            <li>Contatos</li>
-          </ul>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button onclick="closeMap()">Fechar</button>
-      </div>
-    </div>
-  </div>
+<div id="mapModal" class="modal">
+  <section class="modal-content" aria-labelledby="modal-title">
 
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
+    <header class="modal-header">
+      <h2 id="modal-title">Mapa de Navegação do Portal</h2>
+
+      <button class="close" onclick="closeMap()" aria-label="Fechar modal">
+        &times;
+      </button>
+    </header>
+
+    <div class="modal-body">
+      <section>
+        <h3>Área do Servidor</h3>
+        <ul>
+          <li>SIGRH</li>
+          <li>Avaliação de Desempenho</li>
+          <li>Documentos Internos</li>
+          <li>Comunicação Interna</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Área do Aluno</h3>
+        <ul>
+          <li>SUAP</li>
+          <li>Portal</li>
+          <li>AVA</li>
+          <li>Contatos</li>
+        </ul>
+      </section>
     </div>
+
+    <footer class="modal-footer">
+      <button onclick="closeMap()">Fechar</button>
+    </footer>
+  </section>
+</div>
+
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
   </div>
+</div>
 
   <script src="script.js"></script>
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
