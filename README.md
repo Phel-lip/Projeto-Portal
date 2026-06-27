@@ -1,8 +1,8 @@
 # Portal IFBA
 
-Aplicação web desenvolvida com o objetivo de centralizar e facilitar o acesso às principais páginas e serviços do IFBA em um único lugar.
+Aplicação web desenvolvida para centralizar informações e facilitar o acesso a páginas e serviços em uma única interface.
 
-O projeto busca melhorar a navegação e reduzir o tempo gasto procurando links importantes no dia a dia acadêmico.
+O projeto utiliza o IFBA como estudo de caso, demonstrando uma solução que pode ser aplicada a qualquer organização que necessite reunir links e recursos em um único portal.
 
 ## Preview
 
@@ -11,45 +11,51 @@ O projeto busca melhorar a navegação e reduzir o tempo gasto procurando links 
 ## Demonstração
 
 Acesse a versão online:
+
 https://phel-lip.github.io/Projeto-Portal/
 
 ## Sobre o Projeto
 
-Durante a rotina acadêmica, é comum a necessidade de acessar diversos sistemas e páginas institucionais.
+Durante a rotina acadêmica, é comum acessar diversos sistemas e páginas institucionais.
 
-Este projeto foi desenvolvido como um hub centralizado, reunindo os principais links do IFBA em uma interface simples, acessível e organizada.
+Este projeto reúne esses recursos em uma interface simples, organizada, acessível e responsiva, tornando a navegação mais rápida e intuitiva.
 
-## Funcionalidades
+## Recursos Implementados
 
-- Centralização de links importantes em um único local
-- Interface limpa e de fácil navegação
-- Estrutura organizada por categorias
-- Acesso rápido a serviços utilizados com frequência
+* Centralização de links e recursos
+* Busca por links com autocomplete
+* Modal com mapa de navegação
+* Layout responsivo
+* Modo Alto Contraste
+* Modo Leitura Fácil (OpenDyslexic)
+* Integração com VLibras
 
 ## Tecnologias Utilizadas
 
-- HTML
-- CSS
-- JavaScript
+* HTML
+* CSS
+* JavaScript
 
 ## Estrutura do Projeto
 
-- Organização semântica do HTML
-- Estilização com foco em legibilidade e usabilidade
-- Scripts para interações simples e navegação
+* HTML semântico
+* CSS organizado por arquitetura (Design System, Layout, Componentes, Acessibilidade e Responsividade)
+* JavaScript para busca, autocomplete, modal e recursos de acessibilidade
 
 ## Como Executar Localmente
 
 ```bash
-1. Clone o repositório: git clone https://github.com/Phel-lip/Projeto-Portal.git
-2. Abra o arquivo `index.html` no navegador
+git clone https://github.com/Phel-lip/Projeto-Portal.git
 ```
+
+Após clonar o repositório, abra o arquivo `index.html` em qualquer navegador.
 
 ## Objetivo
 
-Este projeto foi desenvolvido com foco em usabilidade e organização de informação, visando resolver um problema real do cotidiano acadêmico.
+Desenvolver uma aplicação web focada na organização de informações e experiência do usuário, aplicando conceitos de HTML, CSS e JavaScript, além de boas práticas de acessibilidade e responsividade.
 
 ## Autor
 
-Thasso Holanda  
+**Thasso Holanda**
+
 https://github.com/Phel-lip
